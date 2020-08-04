@@ -1,24 +1,8 @@
-import path from "path";
-import React, { useState, useEffect } from "react";
-import { Card, Icon, Item, Image, Input, Header } from "semantic-ui-react";
-import faker from "faker";
-import axios from "axios";
-import { Jumbotron, Container } from "react-bootstrap";
-import css from './Hero.css';
-import { NavBar } from '../components';
+import React from "react";
+import { Header } from "semantic-ui-react";
+import { Container } from "react-bootstrap";
 
-const Hero = ({
-    results,
-    setResults,
-    show,
-    setShow,
-    setLogin,
-    login,
-    setUser,
-    token,
-    setToken,
-    setSearchTerm
-}) => {
+const Hero = () => {
     return (
         <Container fluid>
             <Container style={{

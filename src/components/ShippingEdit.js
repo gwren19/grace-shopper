@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Grid, Segment, Button, Input, Dropdown, Header, Form, Checkbox } from "semantic-ui-react";
+import React, { useState } from "react";
+import { Grid, Segment, Button, Input, Dropdown } from "semantic-ui-react";
 import faker from 'faker';
 
 
@@ -42,8 +42,6 @@ const ShippingEdit = ({ user, setShipping, shippingInfo, setEditMode }) => {
     console.log('Updated Shipping information:', shippingInfo);
 
     return (
-
-
         <Grid celled='internally'>
             <Grid.Column
                 className='column-one'
@@ -54,9 +52,7 @@ const ShippingEdit = ({ user, setShipping, shippingInfo, setEditMode }) => {
                     alignItems: 'space-between'
                 }}
             >
-
             </Grid.Column>
-
             <Grid.Column
                 width={10}
                 style={{
@@ -71,12 +67,10 @@ const ShippingEdit = ({ user, setShipping, shippingInfo, setEditMode }) => {
                     >
                         Edit Your Profile
                         </Segment>
-
                     <Segment>
                         <p> First Name:</p>
                         <Input
                             name='firstname'
-
                             onChange={handleInput}
                         >
                         </Input>
@@ -85,12 +79,10 @@ const ShippingEdit = ({ user, setShipping, shippingInfo, setEditMode }) => {
                         <p>Last Name:</p>
                         <Input
                             name='lastname'
-
                             onChange={handleInput}
                         >
                         </Input>
                     </Segment>
-
                     <Segment>
                         <p>Street Address:</p>
                         <Input
@@ -100,7 +92,6 @@ const ShippingEdit = ({ user, setShipping, shippingInfo, setEditMode }) => {
                         >
                         </Input>
                     </Segment>
-
                     <Segment.Group
                         horizontal
                         style={{
@@ -116,7 +107,6 @@ const ShippingEdit = ({ user, setShipping, shippingInfo, setEditMode }) => {
                             >
                             </Input>
                         </Segment>
-
                         <Segment>
                             <p>State:</p>
                             <Dropdown
@@ -133,7 +123,6 @@ const ShippingEdit = ({ user, setShipping, shippingInfo, setEditMode }) => {
                                 onChange={handleInput}
                             />
                         </Segment>
-
                         <Segment>
                             <p>Zip Code:</p>
                             <Input
@@ -144,13 +133,11 @@ const ShippingEdit = ({ user, setShipping, shippingInfo, setEditMode }) => {
                             </Input>
                         </Segment>
                     </Segment.Group>
-
                     <Segment>
                         <p>Preferred Shipping Method:</p>
                         <Dropdown options={shipOptions} onChange={handleSelect} />
                     </Segment>
                 </Segment.Group>
-
                 <Segment>
                     <Button
                         onClick={e => setEditMode(false)}
@@ -158,15 +145,11 @@ const ShippingEdit = ({ user, setShipping, shippingInfo, setEditMode }) => {
                         DONE
                         </Button>
                 </Segment>
-
             </Grid.Column>
-
             <Grid.Column width={3}>
-
             </Grid.Column>
         </Grid>
     )
-
 }
 
 export { ShippingEdit };

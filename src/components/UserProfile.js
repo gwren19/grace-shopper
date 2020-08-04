@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Grid, Segment, Image, Button, Dimmer, Loader } from 'semantic-ui-react'
 import axios from 'axios';
-import './UserProfile.css'
 import { EditProfile, UserPayments, AddPaymentModal } from '../components';
 
 const UserProfile = ({

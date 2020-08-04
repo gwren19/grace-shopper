@@ -3,9 +3,8 @@ import { Container, Header, Image, Item } from 'semantic-ui-react';
 import axios from 'axios';
 
 const Stories = () => {
-
     const [blogs, setBlogs] = useState([]);
-
+    
     useEffect(() => {
         console.log('Getting all of the blogs!');
         axios.get('/api/blogs')
@@ -20,7 +19,6 @@ const Stories = () => {
     }, [])
 
     return (
-
         <>
             <Container fluid>
                 <Container style={{
@@ -82,10 +80,8 @@ const Stories = () => {
                     : ''
                 }
             </Item.Group>
-
         </>
     )
-
 };
 
 export default Stories;

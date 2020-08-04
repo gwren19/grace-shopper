@@ -1,28 +1,21 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import { Sticky } from 'semantic-ui-react';
 import axios from 'axios';
 
 import {
     Categories,
-    CreateUserModal,
-    EditProfile,
     Hero,
-    LoginModal,
     Merchandise,
     NavBar,
-    SearchBar,
     ProductPage,
     UserProfile,
     Wishlist,
     AboutUsPage,
     Orders,
     Stories,
-    Payments,
     ContactUs,
-    Shipping
 } from './components';
 
 const App = () => {

@@ -1,32 +1,13 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from "react-router-dom";
-import { Card, Icon, Item, Image, Rating, Segment, Loader, Dimmer, Container, Header } from "semantic-ui-react";
+import { Card, Container, Header } from "semantic-ui-react";
 import axios from 'axios';
-
 import { MerchCards } from '../components';
 
 const Wishlist = ({ user, wishlist, setWishlist }) => {
-
-  if (!user.user_id) {
-    
-    // return <div>
-    //   <Segment>
-    //     <Dimmer active inverted>
-    //       <Loader inverted active>Loading</Loader>
-    //     </Dimmer>
-
-    //     <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
-    //   </Segment>
-    // </div>;
-    
-  }
-
   const { user_id } = user;
 
   const history = useHistory();
-
-  
 
   const handleSelect = async (e, data) => {
     history.push(`/wishlist/${data.id}`);
@@ -34,19 +15,14 @@ const Wishlist = ({ user, wishlist, setWishlist }) => {
   }
 
   useEffect(() => {
-
     if (user_id) {
-
       axios.get(`/api/wishlist/${user_id}`)
         .then(res => {
           const list = res.data.wishlistItem;
           setWishlist(list);
         })
         .catch(error => console.error("wishlist error", error))
-
     }
-
-
   }, [])
 
   return (

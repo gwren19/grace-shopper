@@ -2,24 +2,7 @@ import React from 'react';
 import { Grid, Segment, Button } from 'semantic-ui-react'
 import axios from 'axios';
 
-const Payments = ({ user, userPayments, setUserPayments, paymentModalShow }) => {
-    // const { firstname, lastname } = user;
-    // useEffect(() => {
-    //     axios.get(`/api/payments/${user.user_id}`)
-    //         .then(res => {
-    //             console.log('IN THE GET ROUTE')
-    //             const fetchedPayments = res.data.payments
-
-    //             if (fetchedPayments.length) {
-    //                 console.log('These are the payments:', fetchedPayments);
-    //                 setUserPayments(fetchedPayments);
-    //             } else {
-    //                 console.log('No Payments to fetch!')
-    //             }
-
-    //         }).catch(error => console.error("payments error", error))
-    // }, []);
-
+const Payments = ({ user, userPayments }) => {
     const deletePaymentOption = (id) => {
         console.log('handleDelete clicked. Id:', id);
         axios.delete(`/api/payments/${id}`)

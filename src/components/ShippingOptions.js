@@ -24,13 +24,9 @@ const ShippingOptions = ({ user, setStep }) => {
         setShipping(data);
     } 
 
-
     return (
-
         user
-
             ?
-
             <Grid>
                 {
                     editMode ?
@@ -39,9 +35,7 @@ const ShippingOptions = ({ user, setStep }) => {
                         <Shipping setStep={setStep} shippingInfo={shippingInfo} setEditMode={setEditMode} />
                 }
             </Grid >
-
             :
-
             <Grid celled='internally'>
                 <Grid.Column
                     className='column-one'
@@ -52,9 +46,7 @@ const ShippingOptions = ({ user, setStep }) => {
                         alignItems: 'space-between'
                     }}
                 >
-
                 </Grid.Column>
-
                 <Grid.Column
                     width={10}
                     style={{
@@ -86,7 +78,6 @@ const ShippingOptions = ({ user, setStep }) => {
                             >
                             </Input>
                         </Segment>
-
                         <Segment>
                             <p>Street Address:</p>
                             <Input
@@ -95,7 +86,6 @@ const ShippingOptions = ({ user, setStep }) => {
                             >
                             </Input>
                         </Segment>
-
                         <Segment.Group
                             horizontal
                             style={{
@@ -110,7 +100,6 @@ const ShippingOptions = ({ user, setStep }) => {
                                 >
                                 </Input>
                             </Segment>
-
                             <Segment>
                                 <p>State:</p>
                                 <Dropdown
@@ -126,7 +115,6 @@ const ShippingOptions = ({ user, setStep }) => {
                                     options={stateOptions}
                                 />
                             </Segment>
-
                             <Segment>
                                 <p>Zip Code:</p>
                                 <Input
@@ -136,13 +124,11 @@ const ShippingOptions = ({ user, setStep }) => {
                                 </Input>
                             </Segment>
                         </Segment.Group>
-
                         <Segment>
                             <p>Preferred Shipping Method:</p>
                             <Dropdown options={shipOptions} onChange={handleSelect} />
                         </Segment>
                     </Segment.Group>
-
                     <Segment>
                         <Button
                             onClick={e => setEditMode(false)}
@@ -150,16 +136,11 @@ const ShippingOptions = ({ user, setStep }) => {
                             DONE
                             </Button>
                     </Segment>
-
                 </Grid.Column>
-
                 <Grid.Column width={3}>
-
                 </Grid.Column>
             </Grid>
-
     )
-
 }
 
 export { ShippingOptions };

@@ -1,11 +1,8 @@
 import React from "react";
 import {Grid, Segment, Button, Icon} from "semantic-ui-react";
-import { DEFAULT_EXTENSIONS } from "@babel/core";
-
 
 const Shipping = ({setEditMode, shippingInfo, setStep}) =>{
     //get user shipping information and populate
-
     const handleClick=(e)=>{
         e.preventDefault();
         setEditMode(true);
@@ -24,9 +21,7 @@ const Shipping = ({setEditMode, shippingInfo, setStep}) =>{
                             alignItems: 'space-between'
                         }}
                     >
-                        
                     </Grid.Column>
-
                     <Grid.Column
                         width={10}
                         style={{
@@ -55,10 +50,8 @@ const Shipping = ({setEditMode, shippingInfo, setStep}) =>{
                                     size='mini'
                                     floated='right'
                                     onClick={handleClick} >
-                                </Button>
-                            
+                                </Button>                       
                             </Segment>
-
                             <Segment>
                                 <label> First Name:</label>
                                 <p>{firstname}</p>
@@ -95,15 +88,11 @@ const Shipping = ({setEditMode, shippingInfo, setStep}) =>{
                                 <p>{shipping}</p>
                             </Segment>
                         </Segment.Group>
-
                     </Grid.Column>
-
                     <Grid.Column width={3}>
-                        
                     </Grid.Column>
                 </>
     )
-
 }
 
 export default Shipping;
